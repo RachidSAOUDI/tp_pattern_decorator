@@ -3,6 +3,7 @@ package ma.usmba;
 import ma.usmba.composants.Boisson;
 import ma.usmba.composants.Espresso;
 import ma.usmba.composants.Sumatra;
+import ma.usmba.decorateurs.Chocolat;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,8 @@ public class Main {
         boisson=new Sumatra();
         System.out.println(boisson.getDescription());
         System.out.println(boisson.cout());
-        boisson=new Espresso();
+        System.out.println("-----------------------------");
+        boisson=new Chocolat(boisson);
         System.out.println(boisson.getDescription());
         System.out.println(boisson.cout());
     }
